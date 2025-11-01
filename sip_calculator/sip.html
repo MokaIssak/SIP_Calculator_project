@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIP Calculator - MOKA ISSAK</title>
+  <link rel="stylesheet" href="sip.css" />
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="calculator-header">
+      <div class="logo-box">MOKA<br>ISSAK</div>
+      <h1>SIP Calculator</h1>
+    </div>
+
+    <div class="form">
+      <label>
+        Monthly Investment:
+        <span class="value-badge" id="monthlyDisplay">₹ 5000</span>
+      </label>
+      <input type="range" id="monthly" min="1000" max="100000" step="100" value="5000" />
+
+      <label>
+        Expected Return Rate (p.a):
+        <span class="value-badge" id="rateDisplay">12%</span>
+      </label>
+      <input type="range" id="rate" min="1" max="20" step="0.1" value="12" />
+
+      <label>
+        Time Period (years):
+        <span class="value-badge" id="yearsDisplay">10 Yr</span>
+      </label>
+      <input type="range" id="years" min="1" max="40" step="1" value="10" />
+
+      <button class="calculate-btn" onclick="calculateSIP()">INVEST NOW</button>
+    </div>
+
+    <div class="results">
+      <div class="result-card">
+        <p>Invested Amount</p>
+        <h3>₹<span id="totalInvestment">0</span></h3>
+      </div>
+      <div class="result-card">
+        <p>Est. Returns</p>
+        <h3>₹<span id="expectedReturn">0</span></h3>
+      </div>
+      <div class="result-card">
+        <p>Total Value</p>
+        <h3>₹<span id="futureValue">0</span></h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="sip.js"></script>
+</body>
+</html>
